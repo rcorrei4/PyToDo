@@ -1,5 +1,5 @@
 # PyToDo
-Django ToDo Web Application
+Django ToDo Web Application (In progress)
 
 </br>
 
