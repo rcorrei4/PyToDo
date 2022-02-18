@@ -1,0 +1,100 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-family: 'Inter', sans-serif;
+	color: #0F093F;
+}
+
+body {
+	padding: 60px;
+}
+
+header {
+	display: flex;
+}
+
+header img {
+	widows: 182px;
+	height: 58px;
+}
+
+header h3 {
+	margin-left: auto;
+	color: rgba(15, 9, 63, 0.5);
+}
+
+header h3 a {
+	text-decoration: none;
+	color: #6857DD;
+}
+
+.login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login img {
+	margin-top: 100px;
+}
+
+.login h1 {
+	margin-bottom: 0;
+}
+
+.login h3 {
+	margin-top: 0;
+	color: rgba(15, 9, 63, 0.5);
+}
+
+form {
+	display: grid;
+	margin-top: 30px;
+}
+
+.login input {
+	padding: 10px;
+	font-size: 18px;
+	border: 3px solid rgba(15, 9, 63, 0.5);
+	margin-bottom: 10px;
+	outline: none;
+	color: #0F093F;
+}
+
+.login input::selection {
+	color: white;
+	background: #6857DD;
+}
+
+.login form div {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login button {
+	cursor: pointer;
+	margin-right: 20px;
+	background-color: #6857DD;
+	color: white;
+	outline: none;
+	border: none;
+	border-radius: 50px;
+	font-weight: bold;
+	font-size: 24px;
+	padding: 20px 40px;
+}
+
+.login h3 {
+	font-size: 16px;
+	margin: 0;
+}
+
+.login h3 a {
+	color: #6857DD;
+	text-decoration: none;
+}
