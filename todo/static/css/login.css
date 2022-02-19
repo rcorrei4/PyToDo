@@ -56,7 +56,7 @@ form {
 }
 
 
-.login input::selection {
+::selection {
 	color: white;
 	background: #6857DD;
 }
