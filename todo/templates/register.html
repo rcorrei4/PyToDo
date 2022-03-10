@@ -9,19 +9,19 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
-	<title>PyToDo | Login</title>
+	<title>PyToDo | Register</title>
 </head>
 <body>
 	<div>
 		<header>
 			<img src="{% static 'images/PyToDo.png' %}">
-			<h3>New user? <a href="{% url 'register' %}">Sign Up</a></h3>
+			<h3>Already registered? <a href="{% url 'login' %}">Sign In</a></h3>
 		</header>
 		<div class="login">
 			<img src="{% static 'images/hello.svg' %}" width="50%">
 			<div class="form-div">
-				<h1>Welcome back!</h1>
-				<h3>Login to continue</h3>
+				<h1>Create account</h1>
+				<h3>Fill the form below to continue</h3>
 				<form method="post">
 					<div class="col-3">
 		            	<input class="effect-7" type="text" placeholder="Username">
@@ -35,9 +35,14 @@
 		                <i></i>
 		              	</span>
 		          	</div>
+		          	<div class="col-3">
+		            	<input class="effect-7" type="password" placeholder="Confirm password">
+		              	<span class="focus-border">
+		                <i></i>
+		              	</span>
+		          	</div>
 					<div>
-						<button type="submit">Login</button>
-						<h3 href="#">Forgot password? <a href="#">Click here</a></h3>
+						<button type="submit">Register</button>
 					</div>
 				</form>
 			</div>
