@@ -14,10 +14,12 @@ class TaskViewSet(viewsets.ModelViewSet):
 	serializer_class = TaskSerializer
 	permission_classes = [permissions.IsAuthenticated]
 
+	#Substituir o método get para pegar somente a tarefa do usuário logado
 	def get_queryset(self):
 		user = self.request.user
 		return Task.objects.filter(user=user)
 
+	#Criar task e adicionar usuário logado como autor
 	def perform_create(self, serializer):
 		return serializer.save(user=self.request.user)
 
@@ -26,9 +28,11 @@ class TagViewSet(viewsets.ModelViewSet):
 	serializer_class = TagSerializer
 	permission_classes = [permissions.IsAuthenticated]
 
+	#Substituir o método get para pegar somente a tag do usuário logado
 	def get_queryset(self):
 		user = self.request.user
 		return Tag.objects.filter(user=user)
 
+	#Criar tag e adicionar usuário logado como autor
 	def perform_create(self, serializer):
 		return serializer.save(user=self.request.user)

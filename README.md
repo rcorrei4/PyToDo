@@ -1,7 +1,7 @@
 
 # PyToDo (Em progresso)
 
-PyToDo é uma API de uma aplicação ToDo feito utilizando o Django Rest Framework. Possui as funções básicas que um aplicativo ToDo tem.
+Aplicação ToDo que fiz para aprender ReactJS, feito utilizando o Django Rest Framework no backend e ReactJS no frontend. Possui as funções básicas que um aplicativo ToDo tem.
 </br>
 
 ## Para fazer
