@@ -9,7 +9,7 @@ PyToDo é uma API de uma aplicação ToDo feito utilizando o Django Rest Framewo
  - [X] Ver/Adicionar/Editar/Excluir tarefa
  - [X] Ver/Adicionar/Editar/Excluir tag
  - [X] Documentação com Swagger UI e ReDoc
- - [ ] Autenticação de usuários utilizando JWT Token
+ - [X] Autenticação de usuários utilizando JWT Token
  - [ ] Armazenar os dados no PostgreSQL ao invés do SQLite
  - [ ] Desenvolver o frontend com ReactJS
 

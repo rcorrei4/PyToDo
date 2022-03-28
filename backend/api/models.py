@@ -5,7 +5,7 @@ class User(AbstractUser):
 	pass
 
 class Task(models.Model):
-	user = models.ForeignKey('User', on_delete=models.CASCADE)
+	user = models.ForeignKey('User', on_delete=models.CASCADE, blank=True)
 	name = models.CharField(max_length=128)
 	notes = models.CharField(max_length=512)
 	tags = models.ManyToManyField("Tag", blank=True)
@@ -15,6 +15,7 @@ class Task(models.Model):
 		return self.name
 
 class Tag(models.Model):
+	user = models.ForeignKey('User', on_delete=models.CASCADE, blank=True)
 	name = models.CharField(max_length=64)
 
 	def __str__(self):

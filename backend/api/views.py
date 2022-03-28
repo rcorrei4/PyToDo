@@ -18,6 +18,9 @@ class TaskViewSet(viewsets.ModelViewSet):
 		user = self.request.user
 		return Task.objects.filter(user=user)
 
+	def perform_create(self, serializer):
+		return serializer.save(user=self.request.user)
+
 class TagViewSet(viewsets.ModelViewSet):
 	queryset = Tag.objects.all()
 	serializer_class = TagSerializer
@@ -26,3 +29,6 @@ class TagViewSet(viewsets.ModelViewSet):
 	def get_queryset(self):
 		user = self.request.user
 		return Tag.objects.filter(user=user)
+
+	def perform_create(self, serializer):
+		return serializer.save(user=self.request.user)
