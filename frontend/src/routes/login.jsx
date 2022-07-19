@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from "react-router-dom";
 import logo from '../images/PyToDo.png';
 import hello from '../images/hello.svg';
 import '../css/login.css';
@@ -38,10 +39,19 @@ class Form extends React.Component {
         password: this.state.password
       }),
     })
-    .then(response => response.json())
     .then(response => {
-      console.log(response)
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`)
+      } else {
+        return response.json()
+      }
     })
+    .then(data => {
+      console.log(data)
+    })
+    .catch(err => {
+      console.log(err);
+    });
     
     event.preventDefault();
   }
@@ -77,7 +87,7 @@ class LoginPage extends React.Component {
     <div>
       <header>
         <img src={logo} />
-        <h3>New user? <a href="#">Sign Up</a></h3>
+        <h3>New user? <Link to="/register">Sign Up</Link></h3>
       </header>
       <div className="login">
         <img src={hello} width="50%" />
