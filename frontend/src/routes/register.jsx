@@ -30,10 +30,6 @@ class Form extends React.Component {
   handleSubmit(event) {
     fetch("http://127.0.0.1:8000/api/accounts", {
       "method": "POST",
-      "headers": {
-        "content-type": "application/json",
-        "accept": "application/json"
-      },
       "body": JSON.stringify({
         username: this.state.username,
         password: this.state.password
@@ -42,13 +38,31 @@ class Form extends React.Component {
     .then(response => {
       if (!response.ok) {
         throw new Error(`Error! status: ${response.status}`)
-        console.log(response)
       } else {
         return response.json()
       }
     })
     .then(data => {
-      console.log(data)
+      fetch("http://127.0.0.1:8000/api/token/", {
+        "method": "POST",
+        "body": JSON.stringify({
+          username: this.state.username,
+          password: this.state.password
+        }),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error! status: ${response.status}`)
+        } else {
+          return response.json()
+        }
+      })
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => {
+        console.log(err);
+      });
     })
     .catch(err => {
       console.log(err);

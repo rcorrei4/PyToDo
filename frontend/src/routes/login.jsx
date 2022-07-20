@@ -30,10 +30,6 @@ class Form extends React.Component {
   handleSubmit(event) {
     fetch("http://127.0.0.1:8000/api/token/", {
       "method": "POST",
-      "headers": {
-        "content-type": "application/json",
-        "accept": "application/json"
-      },
       "body": JSON.stringify({
         username: this.state.username,
         password: this.state.password
