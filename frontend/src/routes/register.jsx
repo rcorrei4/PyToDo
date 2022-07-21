@@ -58,7 +58,7 @@ class Form extends React.Component {
         }
       })
       .then(data => {
-        console.log(data)
+        localStorage.setItem("user", data.access);
       })
       .catch(err => {
         console.log(err);
